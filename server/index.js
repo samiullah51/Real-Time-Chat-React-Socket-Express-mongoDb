@@ -17,13 +17,10 @@ const io = new Server(server, {
 });
 
 // MongoDB connection setup
-mongoose.connect(
-  "mongodb+srv://developerjs:WebDev0!a@cluster0.m7zxglh.mongodb.net/test?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(URI_Db, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 const messageSchema = new mongoose.Schema({
   text: String,
 });
